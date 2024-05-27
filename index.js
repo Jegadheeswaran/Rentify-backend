@@ -32,7 +32,8 @@ const propertySchema = zod.object({
 
 
 app.use(cors({
-    origin: 'https://rentify-frontend-ecru.vercel.app/'
+    origin: "https://rentify-frontend-ecru.vercel.app",
+    methods : ["GET", "POST", "PUT", "DELETE"]
 }));
 
 app.use(express.json());
