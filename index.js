@@ -31,11 +31,13 @@ const propertySchema = zod.object({
   });
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://rentify-frontend-ecru.vercel.app/'
+}));
 
 app.use(express.json());
 
-//login end point
+//login end point       
 
 app.post("/signup", async (req, res) => {
     const body = req.body;
