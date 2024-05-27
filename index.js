@@ -235,7 +235,7 @@ app.get("/property/:id",authenticationMiddleware, async (req, res) => {
 
 //viewing all and filtered property
 
-app.get('/properties', async (req, res) => {
+app.get('/allproperties', async (req, res) => {
     try {
         const { city, state, minBedrooms, maxBedrooms, minBathrooms, maxBathrooms } = req.query;
 
